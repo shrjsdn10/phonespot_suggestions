@@ -208,6 +208,35 @@ a{color:inherit;text-decoration:none}
 
 /* float */
 .fab{position:fixed;right:18px;bottom:22px;width:56px;height:56px;background:var(--orange);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 6px 18px rgba(240,97,15,.4);cursor:pointer;z-index:50;text-decoration:none}
+
+/* ---- 미니 데모: 서비스(quote v2) 원본 요소 이식 ---- */
+.demo-inner .tel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.demo-inner .tel{aspect-ratio:1.4;display:flex;align-items:center;justify-content:center;background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r-md);cursor:pointer;transition:all .15s var(--ease);font-weight:800;font-size:15px;color:var(--ink-2)}
+.demo-inner .tel img{max-height:34px;max-width:70%;object-fit:contain;pointer-events:none;display:block}
+.demo-inner .tel.on{border-color:var(--orange);border-width:2px;box-shadow:0 0 0 3px rgba(240,97,15,.08)}
+.demo-inner .tel:hover{border-color:var(--ink-3)}
+.demo-inner .brand-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.demo-inner .brand{padding:22px 4px;text-align:center;background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r-md);cursor:pointer;transition:all .15s var(--ease);font-size:13px;font-weight:700;color:var(--ink-2);word-break:keep-all}
+.demo-inner .brand.on{border-color:var(--orange);border-width:2px;color:var(--ink);box-shadow:0 0 0 3px rgba(240,97,15,.08)}
+.demo-inner .brand:hover{border-color:var(--ink-3)}
+.demo-inner .brand.dis{opacity:.45}
+.qdev{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:18px;margin-bottom:12px;display:flex;gap:10px;align-items:stretch}
+.qleft{width:105px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;text-align:center}
+.qimg{width:100%;min-height:75px;max-height:90px;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+.qimg img{max-height:90px;max-width:100%;object-fit:contain}
+.qname{margin-bottom:8px;font-size:13px;font-weight:700;line-height:1.3;word-break:keep-all}
+.qcaps{display:flex;flex-direction:column;gap:6px;width:100%}
+.qcap{padding:6px 14px;border:1.5px solid var(--line);border-radius:8px;font-size:12px;font-weight:700;color:var(--ink-2);cursor:pointer;transition:all .15s var(--ease);background:var(--surface);text-align:center}
+.qcap.on{border-color:var(--orange);border-width:2px;color:var(--orange)}
+.qrows{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px;justify-content:center}
+.qrow{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:var(--r-md);cursor:pointer;transition:all .15s var(--ease)}
+.qrow:hover{border-color:var(--ink-3);box-shadow:0 4px 14px rgba(0,0,0,.06)}
+.qlogo{width:44px;height:26px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px}
+.qlogo img{max-height:20px;max-width:100%;object-fit:contain}
+.qtag{font-size:10px;font-weight:700;color:#7f1d1d;background:#fecaca;display:inline-block;padding:1px 6px;border-radius:3px;margin-bottom:2px}
+.qprice{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:800;color:var(--ink)}
+.qpct{font-size:13px;font-weight:800;color:var(--red);background:#fee2e2;padding:2px 7px;border-radius:5px}
+.qold{font-size:10.5px;color:var(--ink-3);text-decoration:line-through;line-height:1.2;margin-top:1px}
 </style>
 </head>
 <body>
@@ -270,14 +299,14 @@ a{color:inherit;text-decoration:none}
       </div>
       <div class="demo-inner">
         <div class="step" style="margin-bottom:12px"><span class="step-no">1</span><span class="step-t" style="font-size:14px">이용 중인 통신사</span></div>
-        <div class="fee-grid" id="dCarrier"></div>
+        <div class="tel-grid" id="dCarrier"></div>
         <div id="dStep2" style="display:none;margin-top:18px">
           <div class="step" style="margin-bottom:12px"><span class="step-no">2</span><span class="step-t" style="font-size:14px">제조사 선택</span></div>
-          <div class="fee-grid" id="dBrand"></div>
+          <div class="brand-grid" id="dBrand"></div>
         </div>
         <div id="dStep3" style="display:none;margin-top:18px">
-          <div class="step" style="margin-bottom:12px"><span class="step-no">3</span><span class="step-t" style="font-size:14px">실시간 최저가 비교</span></div>
-          <div class="price-list" id="dList"></div>
+          <div class="step" style="margin-bottom:12px"><span class="step-no">3</span><span class="step-t" style="font-size:14px">단말·가격 비교</span></div>
+          <div id="dList"></div>
         </div>
         <div class="demo-hint" id="dHint"><span class="k">↑ 이용 중인 통신사를 눌러보세요</span></div>
       </div>
@@ -432,41 +461,71 @@ function calcRender(){
 }
 calcRender();
 
-/* ---- 사용법 미니 데모 ---- */
-const DEMO={carrier:null,brand:null};
-const DCARRIERS=[['KT','KT','#ed1b2f'],['SKT','SKT','#3318ff'],['LGU','LG U+','#a50034'],['MVNO','알뜰폰','#6e6e73']];
-const DBRANDS=['삼성','애플'];
-const DRATIO={KT:0.44,SKT:0.39,LGU:0.41,MVNO:0.35};
+/* ---- 사용법 미니 데모 (서비스 원본 로직·이미지) ---- */
+const IMG_C='https://www.phonespot.co.kr/quote/img/carriers/';
+const IMG_M='https://api.phonespot.co.kr/uploads/model/';
+const DEMO={carrier:null,brand:null,caps:{}};
+const DCAR=[['KT','kt.png','#ed1b2f'],['SKT','skt.png','#3318ff'],['LGU','lgu.png','#a50034'],['MVNO','','#6e6e73']];
+const DCAR_LABEL={KT:'KT',SKT:'SKT',LGU:'LG U+',MVNO:'알뜰폰'};
 const DMODELS={
-  '삼성':[['갤럭시 S26',1254000],['갤럭시 Z플립7',1485000]],
-  '애플':[['아이폰17',1287000],['아이폰16E',990000]]
+ '삼성':[
+  {name:'갤럭시 S26',img:'191811391bb07b134baa1b8b80507dd8.png',caps:[['256GB',1254000],['512GB',1507000]]},
+  {name:'갤럭시 Z플립7',img:'f55d8ae6010b490cd325b33f1c38438a.png',caps:[['256GB',1485000],['512GB',1643400]]}],
+ '애플':[
+  {name:'아이폰17',img:'0a6eee10a803ba667fa71d321de9c0ed.png',caps:[['256GB',1287000],['512GB',1584000]]},
+  {name:'아이폰16E',img:'a9ae2545bfe688ea9809299ffe26d271.png',caps:[['128GB',990000],['256GB',1133000]]}]
 };
+const DTARGETS=[['KT','kt.png','#ed1b2f'],['SKT','skt.png','#3318ff'],['LGU','lgu.png','#a50034']];
+function dCalc(price,opening){
+  const ratio=opening==='기기변경'?0.34:0.39;
+  const support=Math.round(price*ratio/1000)*1000;
+  const real=Math.max(0,price-support);
+  const pct=Math.round((1-real/price)*100);
+  return{real,pct};
+}
 function dRender(){
-  document.getElementById('dCarrier').innerHTML=DCARRIERS.map(([v,t,c])=>
-    `<span class="fee-btn ${DEMO.carrier===v?'on':''}" style="color:${c};font-weight:800;padding:12px 18px" onclick="dSelC('${v}')">${t}</span>`).join('');
+  document.getElementById('dCarrier').innerHTML=DCAR.map(([v,img,c])=>{
+    const inner=img?`<img src="${IMG_C}${img}" alt="${DCAR_LABEL[v]}" onerror="this.outerHTML='<b style=color:${c}>${DCAR_LABEL[v]}</b>'">`:'알뜰폰';
+    return `<div class="tel ${DEMO.carrier===v?'on':''}" onclick="dSelC('${v}')">${inner}</div>`;
+  }).join('');
   const s2=document.getElementById('dStep2'), s3=document.getElementById('dStep3'), h=document.getElementById('dHint');
   s2.style.display=DEMO.carrier?'block':'none';
   if(DEMO.carrier){
-    document.getElementById('dBrand').innerHTML=DBRANDS.map(b=>
-      `<span class="fee-btn ${DEMO.brand===b?'on':''}" style="padding:12px 22px" onclick="dSelB('${b}')">${b}</span>`).join('');
+    const brands=[['삼성',1],['애플',1],['전시폰',0],['키즈효도폰',0]];
+    document.getElementById('dBrand').innerHTML=brands.map(([b,ok])=>
+      `<div class="brand ${DEMO.brand===b?'on':''} ${ok?'':'dis'}" onclick="${ok?`dSelB('${b}')`:`alert('데모에서는 삼성·애플만 체험할 수 있어요. 전체 카테고리는 phonespot.co.kr에서!')`}">${b}</div>`).join('');
   }
   s3.style.display=(DEMO.carrier&&DEMO.brand)?'block':'none';
   if(DEMO.carrier&&DEMO.brand){
-    const r=DRATIO[DEMO.carrier];
-    document.getElementById('dList').innerHTML=DMODELS[DEMO.brand].map(([n,pr])=>{
-      const real=Math.max(0,pr-Math.round(pr*r/1000)*1000);
-      const pct=Math.round((1-real/pr)*100);
-      return `<div class="price-row" onclick="alert('실제 사이트에서는 요금제·가입유형별 상세 비교와 카카오톡 상담으로 이어집니다.\\n\\nphonespot.co.kr')">
-        <div class="pr-mock"></div>
-        <div class="pr-body"><div class="pr-name">${n}<span class="mfr">${DEMO.brand}</span></div>
-        <div class="pr-lo">출고가 <span style="text-decoration:line-through">${won(pr)}</span> → 최저 <b>${won(real)}~</b> <span style="color:var(--red);font-weight:800">${pct}%↓</span></div></div>
-        <span class="pr-chev">›</span></div>`;
+    document.getElementById('dList').innerHTML=DMODELS[DEMO.brand].map(m=>{
+      const cap=DEMO.caps[m.name]||m.caps[0][0];
+      const price=m.caps.find(c=>c[0]===cap)[1];
+      const capBtns=m.caps.map(([cv])=>`<div class="qcap ${cap===cv?'on':''}" onclick="dSelCap('${m.name}','${cv}')">${cv}</div>`).join('');
+      const rows=DTARGETS.map(([t,img,col])=>{
+        const opening=(t===DEMO.carrier)?'기기변경':'번호이동';
+        const r=dCalc(price,opening);
+        return `<div class="qrow" onclick="alert('실제 사이트에서는 요금제·가입유형별 상세 비교와 카카오톡 상담으로 이어집니다.\\n\\nphonespot.co.kr')">
+          <div class="qlogo"><img src="${IMG_C}${img}" alt="${DCAR_LABEL[t]}" onerror="this.outerHTML='<b style=color:${col}>${DCAR_LABEL[t]}</b>'"></div>
+          <div style="flex:1;min-width:0"><span class="qtag">${DCAR_LABEL[t]} ${opening}</span>
+            <div class="qprice"><span class="qpct">${r.pct}%</span><div style="display:flex;flex-direction:column;align-items:flex-start"><span>${won(r.real)}~</span><span class="qold">${won(price)}</span></div></div>
+          </div>
+          <span class="pr-chev">›</span></div>`;
+      }).join('');
+      return `<div class="qdev">
+        <div class="qleft">
+          <div class="qimg"><img src="${IMG_M}${m.img}" alt="${m.name}" onerror="this.style.display='none'"></div>
+          <div class="qname">${m.name}</div>
+          <div class="qcaps">${capBtns}</div>
+        </div>
+        <div class="qrows">${rows}</div>
+      </div>`;
     }).join('');
   }
-  h.innerHTML='<span class="k">'+(!DEMO.carrier?'↑ 이용 중인 통신사를 눌러보세요':(!DEMO.brand?'↑ 제조사를 선택해보세요':'↑ 통신사를 바꾸면 가격이 실시간으로 다시 계산됩니다'))+'</span>';
+  h.innerHTML='<span class="k">'+(!DEMO.carrier?'↑ 이용 중인 통신사를 눌러보세요':(!DEMO.brand?'↑ 제조사를 선택해보세요':'↑ 통신사·용량을 바꾸면 가격이 실시간으로 다시 계산됩니다'))+'</span>';
 }
 function dSelC(v){DEMO.carrier=v;dRender();}
 function dSelB(v){DEMO.brand=v;dRender();}
+function dSelCap(n,c){DEMO.caps[n]=c;dRender();}
 dRender();
 
 /* ---- FAQ ± ---- */
