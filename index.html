@@ -26,147 +26,116 @@ a{color:inherit;text-decoration:none}
 /* 헤더 */
 .hdr{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
 .hdr-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 24px}
-.hdr-logo{display:flex;align-items:center;gap:8px;font-size:20px;font-weight:800;color:var(--ink)}
-.hdr-logo .pin{color:var(--orange);font-size:18px}
-.hdr-tag{font-size:12px;font-weight:800;color:var(--orange);background:var(--orange-light);border:1px solid var(--orange-soft);border-radius:999px;padding:6px 14px}
+.hdr-logo{display:flex;align-items:center;gap:8px;font-size:23px;font-weight:800;color:var(--ink)}
+.hdr-logo .pin{color:var(--orange);font-size:21px}
+.hdr-tag{font-size:15px;font-weight:800;color:var(--orange);background:var(--orange-light);border:1px solid var(--orange-soft);border-radius:999px;padding:6px 14px}
 
 /* 레이아웃 */
 .wrap{max-width:960px;margin:0 auto;padding:36px 24px 0}
 @media (max-width:700px){ .wrap{padding:20px 16px 0} }
 
 /* 타이포 */
-.label{font-size:11px;font-weight:800;color:var(--orange);letter-spacing:.06em;margin-bottom:8px}
-.title{font-size:32px;font-weight:800;color:var(--ink);line-height:1.25;margin-bottom:10px;letter-spacing:-.02em}
-.sub{font-size:14px;color:var(--ink-2);line-height:1.6;margin-bottom:22px}
-@media (max-width:700px){ .title{font-size:24px} .sub{font-size:13px} }
-.hint{background:var(--orange-light);border-radius:12px;padding:14px 16px;font-size:13px;color:#9a3412;line-height:1.55;margin-bottom:22px}
+.label{font-size:14px;font-weight:800;color:var(--orange);letter-spacing:.06em;margin-bottom:8px}
+.title{font-size:35px;font-weight:800;color:var(--ink);line-height:1.25;margin-bottom:10px;letter-spacing:-.02em}
+.sub{font-size:17px;color:var(--ink-2);line-height:1.6;margin-bottom:22px}
+@media (max-width:700px){ .title{font-size:27px} .sub{font-size:16px} }
+.hint{background:var(--orange-light);border-radius:12px;padding:14px 16px;font-size:16px;color:#9a3412;line-height:1.55;margin-bottom:22px}
 .hint b{color:#7c2d12}
 
 /* 카드 + 스텝 */
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;margin-bottom:14px}
 @media (max-width:700px){ .card{padding:20px} }
 .step{display:flex;align-items:center;gap:10px;margin-bottom:16px}
-.step-no{display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;padding:0 9px;background:var(--orange);color:#fff;font-size:13px;font-weight:800;border-radius:50%}
+.step-no{display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;padding:0 9px;background:var(--orange);color:#fff;font-size:16px;font-weight:800;border-radius:50%}
 .step-no.wide{border-radius:999px}
-.step-t{font-size:16px;font-weight:800;color:var(--ink)}
-.card p.body{font-size:13.5px;color:var(--ink-2);line-height:1.65}
+.step-t{font-size:19px;font-weight:800;color:var(--ink)}
+.card p.body{font-size:16.5px;color:var(--ink-2);line-height:1.65}
 .card p.body b{color:var(--ink)}
 
 /* 섹션 */
 .sect{margin-top:34px}
-.sect-h{font-size:18px;font-weight:800;margin-bottom:4px;color:var(--ink)}
-.sect-sub{margin:0 0 16px;color:var(--ink-2);font-size:13px;line-height:1.55}
+.sect-h{font-size:21px;font-weight:800;margin-bottom:4px;color:var(--ink)}
+.sect-sub{margin:0 0 16px;color:var(--ink-2);font-size:16px;line-height:1.55}
 
 /* 플레이스홀더 */
 .ph{display:inline-block;border:1.5px dashed var(--orange);background:var(--orange-light);border-radius:8px;padding:1px 9px;color:#9a3412;font-weight:800}
+
+/* 스토리 (문제→해결 메인 블록) */
+.story{margin-bottom:14px}
+.story-prob{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 24px;text-align:center}
+.story-k{font-size:17px;font-weight:800;color:var(--ink-3);letter-spacing:.05em;margin-bottom:16px}
+.story-chips{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.schip{display:inline-block;background:var(--field);border:1.5px dashed var(--line-2);border-radius:10px;padding:10px 17px;font-size:17.5px;font-weight:700;color:var(--ink-2)}
+.story-prob p{font-size:18.5px;color:var(--ink-2);line-height:1.65}
+.story-arr{text-align:center;font-size:18.5px;font-weight:800;color:var(--orange);padding:14px 0}
+.story-sol{background:linear-gradient(135deg,#f0610f,#ff8a3d);border-radius:var(--r-lg);padding:36px 24px;text-align:center;color:#fff;box-shadow:0 10px 28px rgba(240,97,15,.28)}
+.story-big{font-size:30px;font-weight:800;line-height:1.45;letter-spacing:-.02em;margin-bottom:12px}
+.story-big b{background:linear-gradient(transparent 62%,rgba(255,255,255,.38) 62%);padding:0;border-radius:0}
+.story-sol p{font-size:18.5px;opacity:.93;line-height:1.6}
+@media (max-width:700px){ .story-big{font-size:24px} .story-sol{padding:28px 18px} .schip{font-size:15.5px;padding:9px 13px} }
 
 /* 말풍선 (시청자 고민) */
 .bubbles{display:flex;flex-direction:column;gap:10px;margin:6px 0 4px}
 .bubble-row{display:flex}
 .bubble-row.r{justify-content:flex-end}
-.bubble{display:inline-flex;align-items:center;gap:10px;background:var(--field);border-radius:14px;padding:11px 16px;font-size:13.5px;font-weight:600;color:var(--ink)}
-.bubble .em{font-size:17px}
+.bubble{display:inline-flex;align-items:center;gap:10px;background:var(--field);border-radius:14px;padding:11px 16px;font-size:16.5px;font-weight:600;color:var(--ink)}
+.bubble .em{font-size:20px}
 
-/* 숫자 증명 */
-.benefit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-@media (min-width:800px){ .benefit-grid{grid-template-columns:repeat(4,minmax(0,1fr))} }
-.benefit{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:22px 14px;text-align:center;transition:transform .15s var(--ease)}
-.benefit:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.06)}
-.benefit-ico{font-size:26px;margin-bottom:10px}
-.benefit-v{font-size:24px;font-weight:800;color:var(--orange);letter-spacing:-.02em;margin-bottom:6px}
-.benefit-t{font-size:15px;font-weight:800;margin-bottom:6px}
-.benefit-s{font-size:12px;color:var(--ink-3);line-height:1.5}
+/* 기능 소개 (섹션2 — 아이콘 가로 리스트) */
+.feat-list{display:flex;flex-direction:column;gap:10px}
+.feat{display:flex;align-items:center;gap:16px;padding:16px 18px;background:var(--field);border-radius:var(--r-md)}
+.feat-ico{flex-shrink:0;width:46px;height:46px;border-radius:14px;background:var(--orange-light);color:var(--orange);display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:800}
+.feat-t{font-size:17.5px;font-weight:800;margin-bottom:3px}
+.feat-s{font-size:15.5px;color:var(--ink-2);line-height:1.6}
+.feat-s b{color:var(--ink)}
+.feat{align-items:flex-start}
+.feat .feat-ico{margin-top:2px}
 
-/* 트랙 토글 (mode) */
-.mode{display:flex;background:var(--field);border-radius:14px;padding:5px;margin-bottom:16px;gap:5px}
-.mode-btn{flex:1;padding:14px;border-radius:11px;font-size:14px;font-weight:700;color:var(--ink-2);text-align:center;cursor:pointer;transition:all .15s var(--ease)}
-.mode-btn.on{background:var(--orange);color:#fff;box-shadow:0 4px 10px rgba(240,97,15,.3)}
-.track-body h4{font-size:17px;font-weight:800;margin-bottom:2px}
-.track-body .tsub{font-size:12.5px;color:var(--orange);font-weight:800;margin-bottom:12px}
+/* 이용 흐름 (섹션3 — 화살표 스텝) */
+.flow{display:flex;align-items:flex-start}
+.flow-step{flex:1;text-align:center;padding:4px 6px}
+.flow-no{width:40px;height:40px;margin:0 auto 10px;border-radius:50%;background:var(--orange);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:19px;box-shadow:0 4px 12px rgba(240,97,15,.3)}
+.flow-t{font-size:16.5px;font-weight:800;margin-bottom:4px}
+.flow-s{font-size:14.5px;color:var(--ink-3);line-height:1.5}
+.flow-arrow{color:var(--orange);font-size:23px;font-weight:800;margin-top:12px}
+
+/* 숫자 증명 (섹션4 — 다크 밴드) */
+.stat-band{background:#202024;border-radius:var(--r-lg);padding:28px 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+.stat-v{font-size:25px;font-weight:800;color:#fff;margin-bottom:6px;letter-spacing:-.02em}
+.stat-l{font-size:15px;color:#96969d}
+
+/* 협업 제안 (track) */
+.track-body h4{font-size:20px;font-weight:800;margin-bottom:2px}
+.track-body .tsub{font-size:15.5px;color:var(--orange);font-weight:800;margin-bottom:12px}
 .track-body ul{list-style:none}
-.track-body li{font-size:13.5px;color:var(--ink-2);line-height:1.6;margin-bottom:8px;padding-left:18px;position:relative}
+.track-body li{font-size:16.5px;color:var(--ink-2);line-height:1.6;margin-bottom:8px;padding-left:18px;position:relative}
 .track-body li::before{content:"•";color:var(--orange);position:absolute;left:4px;font-weight:900}
 .track-body li b{color:var(--ink)}
-.combo{margin-top:14px;background:var(--orange-light);border-radius:12px;padding:12px 16px;font-size:13px;font-weight:700;color:#9a3412;text-align:center}
-
-/* 계산기 */
-.crow{margin-bottom:16px}
-.clab{font-size:13px;font-weight:800;margin-bottom:9px;color:var(--ink)}
-.clab .h{color:var(--ink-3);font-size:11.5px;font-weight:600}
-.cval{font-size:13px;font-weight:800;color:var(--orange)}
-.fee-grid{display:flex;gap:6px;flex-wrap:wrap}
-.fee-btn{padding:9px 16px;border:1.5px solid var(--line);border-radius:8px;font-size:12.5px;font-weight:700;color:var(--ink-2);cursor:pointer;text-align:center;transition:all .1s var(--ease);background:var(--surface)}
-.fee-btn.on{border-color:var(--orange);color:var(--orange)}
-.crange{width:100%;accent-color:var(--orange)}
-.calc-sum{border-top:1px solid var(--line);margin-top:20px;padding-top:18px}
-.calc-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
-.calc-top .l{font-size:13px;color:var(--ink-3);font-weight:700}
-.calc-top .big{font-size:28px;font-weight:800;color:var(--orange);letter-spacing:-.02em}
-.brk{border:1px solid var(--line);border-radius:13px;padding:6px 16px;background:var(--surface)}
-.brow{display:flex;justify-content:space-between;font-size:13px;padding:9px 0;border-bottom:1px dashed var(--line)}
-.brow:last-child{border-bottom:none}
-.brow .k{color:var(--ink-2)}
-.brow .v{font-weight:700}
-.brow.m .v{color:var(--good)}
-.brow.tot{border-top:2px solid var(--ink);margin-top:2px}
-.brow.tot .k{font-weight:800;color:var(--ink)}
-.brow.tot .v{font-size:16px;font-weight:800;color:var(--orange)}
-.chint{font-size:11.5px;color:var(--ink-3);margin-top:10px;line-height:1.6}
 
 /* 기획안 리스트 (price-row 스타일) */
 .idea-list{display:flex;flex-direction:column;gap:10px}
 .idea{display:flex;align-items:flex-start;gap:14px;padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);cursor:pointer;transition:all .15s var(--ease);position:relative}
 .idea:hover{border-color:var(--ink-3);transform:translateY(-1px);box-shadow:0 4px 14px rgba(0,0,0,.06)}
-.idea-no{flex-shrink:0;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:var(--orange-light);border-radius:12px;font-weight:800;font-size:17px;color:var(--orange)}
+.idea-no{flex-shrink:0;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:var(--orange-light);border-radius:12px;font-weight:800;font-size:20px;color:var(--orange)}
 .idea-b{flex:1;min-width:0}
 .idea-tags{display:flex;gap:6px;margin-bottom:5px;flex-wrap:wrap}
-.idea-tag{font-size:11px;font-weight:700;padding:3px 8px;border-radius:5px;color:#fff;background:var(--purple)}
+.idea-tag{font-size:14px;font-weight:700;padding:3px 8px;border-radius:5px;color:#fff;background:var(--purple)}
 .idea-tag.red{background:var(--red)}
 .idea-tag.blue{background:var(--blue)}
-.idea-t{font-size:14.5px;font-weight:800;color:var(--ink);line-height:1.4}
-.idea-more{font-size:12.5px;color:var(--ink-2);line-height:1.55;margin-top:8px;display:none}
+.idea-t{font-size:17.5px;font-weight:800;color:var(--ink);line-height:1.4}
+.idea-more{font-size:15.5px;color:var(--ink-2);line-height:1.55;margin-top:8px;display:none}
 .idea.open .idea-more{display:block}
-.idea-chev{flex-shrink:0;color:var(--ink-3);font-size:18px;margin-top:12px;transition:transform .15s var(--ease)}
+.idea-chev{flex-shrink:0;color:var(--ink-3);font-size:21px;margin-top:12px;transition:transform .15s var(--ease)}
 .idea.open .idea-chev{transform:rotate(90deg)}
-
-/* 위젯 (서비스 재현) */
-.demo-frame{border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;background:var(--surface)}
-.demo-bar{display:flex;align-items:center;gap:9px;background:var(--field);border-bottom:1px solid var(--line);padding:10px 14px}
-.demo-dots{display:flex;gap:5px}
-.demo-dots i{width:10px;height:10px;border-radius:50%;display:inline-block}
-.demo-url{flex:1;background:var(--surface);border:1px solid var(--line);color:var(--ink-2);font-size:12px;border-radius:8px;padding:5px 14px;text-align:center;font-weight:600}
-.demo-live{color:#fff;font-size:11px;font-weight:800;background:var(--orange);border-radius:999px;padding:4px 11px;white-space:nowrap}
-.demo-live .pd{display:inline-block;width:6px;height:6px;border-radius:50%;background:#fff;margin-right:5px;vertical-align:middle;animation:blink 1.1s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
-.demo-inner{padding:18px}
-.demo-title{font-size:18px;font-weight:800;margin-bottom:4px}
-.demo-sub{font-size:12.5px;color:var(--ink-2);margin-bottom:14px}
-.cap-grid{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-.cap-btn{padding:8px 14px;border:1.5px solid var(--line);border-radius:8px;font-size:12px;font-weight:700;color:var(--ink-2);cursor:pointer;transition:all .1s var(--ease);background:var(--surface)}
-.cap-btn.on{border-color:var(--orange);color:var(--orange)}
-.price-list{display:flex;flex-direction:column;gap:10px}
-.price-row{display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);cursor:pointer;transition:all .15s var(--ease);position:relative}
-.price-row:hover{border-color:var(--ink-3);transform:translateY(-1px);box-shadow:0 4px 14px rgba(0,0,0,.06)}
-.pr-mock{flex-shrink:0;width:34px;height:52px;border:2.5px solid var(--orange);border-radius:8px;position:relative}
-.pr-mock::before{content:"";position:absolute;top:5px;left:50%;transform:translateX(-50%);width:10px;height:2px;border-radius:2px;background:var(--orange-soft)}
-.pr-body{flex:1;min-width:0}
-.pr-name{font-size:14.5px;font-weight:800}
-.pr-name .mfr{font-size:10px;color:var(--ink-3);background:var(--field);border-radius:5px;padding:2px 6px;margin-left:7px;font-weight:700}
-.pr-lo{font-size:12px;color:var(--ink-3);margin-top:3px}
-.pr-lo b{color:var(--orange)}
-.pr-lo .free{color:var(--red);font-weight:800}
-.pr-chev{color:var(--ink-3);font-size:18px}
-.demo-hint{text-align:center;font-size:12px;color:var(--orange);font-weight:700;margin-top:12px}
-.demo-hint .k{display:inline-block;background:var(--orange-light);border-radius:999px;padding:7px 16px}
 
 /* 타임라인 */
 .tl{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 @media (min-width:800px){ .tl{grid-template-columns:repeat(6,1fr)} }
 .tl-step{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:16px 10px;text-align:center}
-.tl-d{font-size:13px;font-weight:800;color:var(--orange);margin-bottom:7px}
-.tl-t{font-size:13px;font-weight:800;margin-bottom:4px}
-.tl-p{font-size:11px;color:var(--ink-3);line-height:1.45;margin-bottom:8px}
-.tl-who{display:inline-block;font-size:10px;font-weight:800;border-radius:999px;padding:2px 9px}
+.tl-d{font-size:16px;font-weight:800;color:var(--orange);margin-bottom:7px}
+.tl-t{font-size:16px;font-weight:800;margin-bottom:4px}
+.tl-p{font-size:14px;color:var(--ink-3);line-height:1.45;margin-bottom:8px}
+.tl-who{display:inline-block;font-size:13px;font-weight:800;border-radius:999px;padding:2px 9px}
 .tl-who.ps{background:var(--orange-light);color:var(--orange)}
 .tl-who.cr{background:#eff6ff;color:var(--blue)}
 .tl-who.both{background:var(--field);color:var(--ink-2)}
@@ -175,107 +144,67 @@ a{color:inherit;text-decoration:none}
 .way-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 @media (max-width:700px){ .way-grid{grid-template-columns:1fr} }
 .way{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:20px}
-.way-h{font-size:15px;font-weight:800;margin-bottom:8px;display:flex;align-items:center;gap:7px}
-.way-h .ico{font-size:17px}
-.way-p{font-size:13px;color:var(--ink-2);line-height:1.6}
+.way-h{font-size:18px;font-weight:800;margin-bottom:8px;display:flex;align-items:center;gap:7px}
+.way-h .ico{font-size:20px}
+.way-p{font-size:16px;color:var(--ink-2);line-height:1.6}
 .way-p b{color:var(--ink);font-weight:700}
 
 /* FAQ */
 .faq{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:18px 22px;margin-bottom:8px;cursor:pointer;transition:all .15s var(--ease)}
-.faq-q{display:flex;align-items:center;justify-content:space-between;font-size:14px;font-weight:700;color:var(--ink);gap:12px}
-.faq-a{font-size:13px;color:var(--ink-2);line-height:1.6;margin-top:10px;display:none}
+.faq-q{display:flex;align-items:center;justify-content:space-between;font-size:17px;font-weight:700;color:var(--ink);gap:12px}
+.faq-a{font-size:16px;color:var(--ink-2);line-height:1.6;margin-top:10px;display:none}
 .faq.open .faq-a{display:block}
-.faq-x{color:var(--ink-3);font-size:18px;flex-shrink:0}
+.faq-x{color:var(--ink-3);font-size:21px;flex-shrink:0}
 
 /* CTA */
 .cta-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:40px 24px;text-align:center;margin-bottom:14px}
-.cta-h{font-size:24px;font-weight:800;line-height:1.4;letter-spacing:-.02em}
+.cta-h{font-size:27px;font-weight:800;line-height:1.4;letter-spacing:-.02em}
 .cta-h .o{color:var(--orange)}
-.cta-sub{font-size:14px;color:var(--ink-2);line-height:1.65;margin-top:12px}
-.cta-btn{display:inline-block;margin-top:22px;background:var(--orange);color:#fff;font-size:16px;font-weight:800;border-radius:999px;padding:16px 42px;box-shadow:0 6px 18px rgba(240,97,15,.35);transition:transform .15s var(--ease)}
+.cta-sub{font-size:17px;color:var(--ink-2);line-height:1.65;margin-top:12px}
+.cta-btn{display:inline-block;margin-top:22px;background:var(--orange);color:#fff;font-size:19px;font-weight:800;border-radius:999px;padding:16px 42px;box-shadow:0 6px 18px rgba(240,97,15,.35);transition:transform .15s var(--ease)}
 .cta-btn:hover{transform:translateY(-2px)}
-.cta-foot{margin-top:18px;font-size:12.5px;color:var(--ink-3);line-height:1.7}
+.cta-foot{margin-top:18px;font-size:15.5px;color:var(--ink-3);line-height:1.7}
 .cta-foot b{color:var(--ink)}
+
+/* 사전승낙서 */
+.cert-wrap{margin-top:22px;display:flex;justify-content:center}
+.cert-link{display:inline-flex;flex-direction:column;align-items:center;gap:9px}
+.cert-link img{width:130px;transition:transform .15s var(--ease)}
+.cert-link:hover img{transform:translateY(-3px)}
+.cert-cap{font-size:14px;color:var(--ink-3);font-weight:700}
 
 /* 푸터 */
 .site-footer{margin-top:40px;padding:36px 0;background:#202024;color:#fff}
 .footer-inner{width:min(calc(100% - 32px),960px);margin:0 auto;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.footer-brand{font-size:18px;font-weight:900;letter-spacing:-.5px;margin-bottom:8px}
-.footer-copy{color:#96969d;font-size:12px;line-height:1.7;margin:0}
+.footer-brand{font-size:21px;font-weight:900;letter-spacing:-.5px;margin-bottom:8px}
+.footer-copy{color:#96969d;font-size:15px;line-height:1.7;margin:0}
 .footer-links{display:flex;flex-wrap:wrap;gap:18px;align-items:center}
-.footer-links a{color:#c4c4c8;font-size:12px;font-weight:650;transition:color .15s}
+.footer-links a{color:#c4c4c8;font-size:15px;font-weight:650;transition:color .15s}
 .footer-links a:hover{color:#fff}
 
 /* float */
-.fab{position:fixed;right:18px;bottom:22px;width:56px;height:56px;background:var(--orange);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 6px 18px rgba(240,97,15,.4);cursor:pointer;z-index:50;text-decoration:none}
-
-/* ---- 미니 데모: 서비스(quote v2) 원본 요소 이식 ---- */
-.demo-inner .tel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.demo-inner .tel{aspect-ratio:1.4;display:flex;align-items:center;justify-content:center;background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r-md);cursor:pointer;transition:all .15s var(--ease);font-weight:800;font-size:15px;color:var(--ink-2)}
-.demo-inner .tel img{max-height:34px;max-width:70%;object-fit:contain;pointer-events:none;display:block}
-.demo-inner .tel.on{border-color:var(--orange);border-width:2px;box-shadow:0 0 0 3px rgba(240,97,15,.08)}
-.demo-inner .tel:hover{border-color:var(--ink-3)}
-.demo-inner .brand-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.demo-inner .brand{padding:22px 4px;text-align:center;background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r-md);cursor:pointer;transition:all .15s var(--ease);font-size:13px;font-weight:700;color:var(--ink-2);word-break:keep-all}
-.demo-inner .brand.on{border-color:var(--orange);border-width:2px;color:var(--ink);box-shadow:0 0 0 3px rgba(240,97,15,.08)}
-.demo-inner .brand:hover{border-color:var(--ink-3)}
-.demo-inner .brand.dis{opacity:.45}
-.qdev{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:18px;margin-bottom:12px;display:flex;gap:10px;align-items:stretch}
-.qleft{width:105px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;text-align:center}
-.qimg{width:100%;min-height:75px;max-height:90px;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
-.qimg img{max-height:90px;max-width:100%;object-fit:contain}
-.qname{margin-bottom:8px;font-size:13px;font-weight:700;line-height:1.3;word-break:keep-all}
-.qcaps{display:flex;flex-direction:column;gap:6px;width:100%}
-.qcap{padding:6px 14px;border:1.5px solid var(--line);border-radius:8px;font-size:12px;font-weight:700;color:var(--ink-2);cursor:pointer;transition:all .15s var(--ease);background:var(--surface);text-align:center}
-.qcap.on{border-color:var(--orange);border-width:2px;color:var(--orange)}
-.qrows{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px;justify-content:center}
-.qrow{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:var(--r-md);cursor:pointer;transition:all .15s var(--ease)}
-.qrow:hover{border-color:var(--ink-3);box-shadow:0 4px 14px rgba(0,0,0,.06)}
-.qlogo{width:44px;height:26px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px}
-.qlogo img{max-height:20px;max-width:100%;object-fit:contain}
-.qtag{font-size:10px;font-weight:700;color:#7f1d1d;background:#fecaca;display:inline-block;padding:1px 6px;border-radius:3px;margin-bottom:2px}
-.qprice{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:800;color:var(--ink)}
-.qpct{font-size:13px;font-weight:800;color:var(--red);background:#fee2e2;padding:2px 7px;border-radius:5px}
-.qold{font-size:10.5px;color:var(--ink-3);text-decoration:line-through;line-height:1.2;margin-top:1px}
+.fab{position:fixed;right:18px;bottom:22px;width:56px;height:56px;background:var(--orange);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:27px;box-shadow:0 6px 18px rgba(240,97,15,.4);cursor:pointer;z-index:50;text-decoration:none}
 
 /* ===== 모바일 대응 ===== */
 @media (max-width:700px){
   .hdr-inner{padding:12px 16px}
-  .hdr-logo{font-size:17px}
-  .hdr-tag{font-size:10px;padding:5px 10px}
-  .benefit-grid{grid-template-columns:repeat(2,1fr)!important}
-  .benefit-grid .benefit:last-child:nth-child(odd){grid-column:1/-1}
-  .benefit{padding:16px 12px}
-  .benefit-v{font-size:20px}
-  .benefit-t{font-size:13.5px}
-  .mode-btn{font-size:12.5px;padding:12px 6px}
-  .sect-h{font-size:16.5px}
+  .hdr-logo{font-size:20px}
+  .hdr-tag{font-size:13px;padding:5px 10px}
+  .stat-band{grid-template-columns:repeat(2,1fr);padding:22px 16px;gap:16px}
+  .stat-band div:last-child:nth-child(odd){grid-column:1/-1}
+  .stat-v{font-size:22px}
+  .sect-h{font-size:19.5px}
   .cta-card{padding:32px 18px}
-  .cta-h{font-size:20px}
-  .demo-inner{padding:14px 12px}
+  .cta-h{font-size:23px}
   .tl{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:560px){
-  .qdev{flex-direction:column;padding:14px}
-  .qleft{width:100%;flex-direction:row;align-items:center;gap:12px;text-align:left}
-  .qimg{width:52px;min-height:0;max-height:60px;margin-bottom:0;flex-shrink:0}
-  .qimg img{max-height:60px}
-  .qname{margin-bottom:0}
-  .qcaps{flex-direction:row;width:auto;margin-left:auto}
-  .qcap{padding:6px 10px}
-  .qrow{padding:9px 10px;gap:8px}
-  .qlogo{width:36px}
-  .qprice{font-size:14.5px;gap:6px}
-  .qpct{font-size:11.5px}
-  .demo-inner .brand{padding:16px 4px;font-size:12px}
-  .demo-inner .tel{font-size:13px}
-  .demo-inner .tel img{max-height:26px}
-  .demo-url{font-size:10.5px;padding:5px 8px}
-  .demo-live{font-size:10px;padding:4px 8px}
-  .bubble{font-size:12.5px;padding:10px 13px}
-  .fee-btn{padding:8px 12px;font-size:12px}
-  .calc-top .big{font-size:22px}
-  .fab{width:48px;height:48px;font-size:20px;right:14px;bottom:16px}
+  .bubble{font-size:15.5px;padding:10px 13px}
+  .flow{flex-direction:column;gap:4px}
+  .flow-arrow{transform:rotate(90deg);margin:2px auto}
+  .feat{padding:13px 14px;gap:12px}
+  .feat-ico{width:40px;height:40px;font-size:20px;border-radius:12px}
+  .fab{width:48px;height:48px;font-size:23px;right:14px;bottom:16px}
 }
 </style>
 </head>
@@ -285,7 +214,7 @@ a{color:inherit;text-decoration:none}
 <header class="hdr">
   <div class="hdr-inner">
     <a href="#" class="hdr-logo"><span class="pin">📍</span>폰스팟</a>
-    <span class="hdr-tag">Creator Partnership Proposal</span>
+    <span class="hdr-tag">크리에이터 협업 제안서</span>
   </div>
 </header>
 
@@ -293,31 +222,48 @@ a{color:inherit;text-decoration:none}
 
   <!-- ===== 히어로 ===== -->
   <div class="label">CREATOR PARTNERSHIP</div>
-  <h1 class="title"><span class="ph">채널명</span>님 구독자들의<br>통신비를 아껴줄 협업을 제안합니다.</h1>
-  <p class="sub">휴대폰 실시간 최저가 비교 플랫폼 <b>폰스팟</b>이 <span class="ph">채널명</span>님께<br>두 가지 수익 모델의 영상 협업을 제안드립니다.</p>
-  <div class="hint"><b>3분이면 다 읽으실 수 있습니다.</b> 중간의 수익 시뮬레이터와 서비스 화면은 직접 눌러서 조작해보실 수 있어요.</div>
+  <h1 class="title">구독자들의 휴대폰값을 아껴줄<br>협업을 제안합니다.</h1>
+  <p class="sub">휴대폰 실시간 가격 비교 플랫폼 <b>폰스팟</b>이<br>제작비가 확정된 PPL 영상 협업을 제안드립니다.</p>
 
-  <!-- ===== ① 왜 연락드렸나 ===== -->
+  <!-- ===== 스토리: 문제 → 해결 (메인) ===== -->
+  <div class="story">
+    <div class="story-prob">
+      <div class="story-k">여기저기 흩어진 '성지 시세'</div>
+      <div class="story-chips">
+        <span class="schip" style="transform:rotate(-2deg)">A성지 ○○만원?</span>
+        <span class="schip" style="transform:rotate(1.5deg)">B성지는 또 다른 가격</span>
+        <span class="schip" style="transform:rotate(-1deg)">우리 동네는…?</span>
+      </div>
+      <p>휴대폰 성지는 전국에 흩어져 있고, 시세도 성지마다·지역마다 달라 혼란이 잦았습니다.<br>같은 기종도 매장마다 가격이 다른 건, 통신사가 매장에 주는 정책이 매일 바뀌기 때문입니다.</p>
+    </div>
+    <div class="story-arr">↓ 그래서 폰스팟은</div>
+    <div class="story-sol">
+      <div class="story-big">흩어진 성지 시세를 <b>가장 저렴한 시세 기준으로 종합</b>해,<br>한눈에 볼 수 있게 만들었습니다.</div>
+      <p>그 차이를 실시간으로 비교해, 누구나 '성지 가격'으로 사게 만듭니다.</p>
+    </div>
+  </div>
+
+  <!-- ===== ① 구독자들의 고민 ===== -->
   <div class="card">
-    <div class="step"><span class="step-no">1</span><span class="step-t">왜 <span style="color:var(--orange)">채널명</span>님께 연락드렸나</span></div>
-    <p class="body" style="margin-bottom:14px"><span class="ph">"○○ 영상 제목" 등 채널 영상 1~2개를 언급하는 맞춤 문단 — 발송 전 반드시 개별 작성</span></p>
-    <p class="body" style="margin-bottom:16px">통신비는 구독자들이 <b>매달 내는 고정비 중 가장 쉽게 줄일 수 있는 항목</b>입니다. 그런데 '성지 가격'은 불투명해서, 지금까지 콘텐츠로 다루기 어려웠습니다. 시청자들의 고민은 늘 같습니다.</p>
+    <div class="step"><span class="step-no">1</span><span class="step-t">폰 바꿀 때마다 반복되는 고민</span></div>
+    <p class="body" style="margin-bottom:16px">휴대폰값은 <b>같은 기종이라도 어디서 사느냐에 따라 수십만 원까지 차이 나는 지출</b>입니다. 그런데 '성지 가격'은 불투명해서, 지금까지 콘텐츠로 다루기 어려웠습니다. 사람들의 고민은 늘 같습니다.</p>
     <div class="bubbles">
       <div class="bubble-row"><span class="bubble"><span class="em">🙋</span>성지 가격, 어디까지 믿어야 하죠?</span></div>
       <div class="bubble-row r"><span class="bubble"><span class="em">😰</span>폰 바꿀 때마다 호갱 될까 무서워요.</span></div>
       <div class="bubble-row"><span class="bubble"><span class="em">⏰</span>알아보는 시간이 너무 아까워요.</span></div>
     </div>
-    <p class="body" style="margin-top:16px">이 질문에 <b>데이터로 답하는 영상</b> — 폰스팟이 소재와 수익을 함께 드리겠습니다.</p>
+    <p class="body" style="margin-top:16px;margin-bottom:12px">고민의 원인은 결국 <b>정보의 비대칭</b>입니다. 폰스팟은 전국에 흩어진 성지 시세를 한곳에 모아 실시간으로 보여주는 방식으로 이 문제를 풉니다. 이용자는 발품 대신 <b>검색 한 번</b>이면 됩니다.</p>
+    <p class="body">그리고 이 이야기를 <b>실제 가격 데이터로 답하는 영상</b>으로 만들 수 있도록, 폰스팟이 콘텐츠 소재와 제작비를 함께 지원하겠습니다.</p>
   </div>
 
   <!-- ===== ② 폰스팟 소개 ===== -->
   <div class="card">
     <div class="step"><span class="step-no">2</span><span class="step-t">폰스팟은 이런 서비스입니다</span></div>
-    <p class="body" style="margin-bottom:18px">휴대폰은 같은 기종도 매장마다 가격이 다릅니다. 통신사가 매장에 주는 정책(리베이트)이 매일 바뀌기 때문입니다. 폰스팟은 그 차이를 <b>실시간으로 비교</b>해, 누구나 '성지 가격'으로 사게 만듭니다.</p>
-    <div class="benefit-grid" style="grid-template-columns:repeat(3,1fr)">
-      <div class="benefit"><div class="benefit-ico">₩</div><div class="benefit-t">실시간 최저가 비교</div><div class="benefit-s">SKT·KT·LG U+·알뜰폰 × 삼성·애플 조건별 실구매가 비교</div></div>
-      <div class="benefit"><div class="benefit-ico">🧮</div><div class="benefit-t">지원금 자동 계산</div><div class="benefit-s">공시지원금·추가지원금·선택약정 반영한 월 납부액 계산</div></div>
-      <div class="benefit"><div class="benefit-ico">⌖</div><div class="benefit-t">가까운 매장 연결</div><div class="benefit-s">위치 기반 판매점 연결 + 전국 온라인 구매 상담</div></div>
+    <p class="body" style="margin-bottom:18px">그 해결 방법을 담은 서비스는 세 가지 기능으로 요약됩니다.</p>
+    <div class="feat-list">
+      <div class="feat"><div class="feat-ico">₩</div><div><div class="feat-t">실시간 가격 비교</div><div class="feat-s">삼성·애플 기종을 SKT·KT·LG U+·알뜰폰 조건별로 <b>한 화면에서 비교</b>합니다. 매장마다 다른 '성지 가격'이 실시간으로 갱신되기 때문에, 발품 팔지 않아도 <b>오늘 기준 가장 저렴한 조건</b>을 바로 확인할 수 있습니다.</div></div></div>
+      <div class="feat"><div class="feat-ico">🧮</div><div><div class="feat-t">지원금 자동 계산</div><div class="feat-s">공시지원금·추가지원금·선택약정 — 복잡한 할인 구조를 자동으로 계산해서, <b>'결국 내가 매달 얼마 내는지'</b> 월 납부액 기준으로 보여줍니다. 요금제 지식이 없어도 조건 비교가 가능합니다.</div></div></div>
+      <div class="feat"><div class="feat-ico">⌖</div><div><div class="feat-t">가까운 매장 연결</div><div class="feat-s">조회한 조건 그대로 <b>위치 기반으로 가까운 판매점과 연결</b>됩니다. 방문이 어렵다면 온라인 상담·개통으로 진행할 수 있어, <b>전국 어디서든</b> 똑같이 이용할 수 있습니다.</div></div></div>
     </div>
   </div>
 
@@ -325,114 +271,60 @@ a{color:inherit;text-decoration:none}
   <div class="card">
     <div class="step"><span class="step-no">3</span><span class="step-t">폰스팟, 이렇게 이용합니다</span></div>
     <p class="body" style="margin-bottom:18px">회원가입도, 매장 방문도 필요 없습니다. 세 단계면 끝나기 때문에 <b>영상 속 시연도 그만큼 간단</b>합니다.</p>
-    <div class="benefit-grid" style="grid-template-columns:repeat(3,1fr)">
-      <div class="benefit"><div class="benefit-v">1</div><div class="benefit-t">통신사·기종 선택</div><div class="benefit-s">쓰던 통신사와 원하는 휴대폰을 고릅니다</div></div>
-      <div class="benefit"><div class="benefit-v">2</div><div class="benefit-t">실시간 최저가 비교</div><div class="benefit-s">지원금 반영 실구매가를 조건별로 비교합니다</div></div>
-      <div class="benefit"><div class="benefit-v">3</div><div class="benefit-t">카카오톡 상담·신청</div><div class="benefit-s">선택한 조건 그대로 전달돼 바로 상담이 시작됩니다</div></div>
-    </div>
-    <div class="hint" style="margin:18px 0 12px"><b>직접 눌러보세요.</b> 실제 서비스 흐름을 그대로 재현한 미니 데모입니다.</div>
-    <div class="demo-frame">
-      <div class="demo-bar">
-        <span class="demo-dots"><i style="background:#FF5F57"></i><i style="background:#FEBC2E"></i><i style="background:#28C840"></i></span>
-        <span class="demo-url">phonespot.co.kr</span>
-        <span class="demo-live"><span class="pd"></span>실시간 작동</span>
-      </div>
-      <div class="demo-inner">
-        <div class="step" style="margin-bottom:12px"><span class="step-no">1</span><span class="step-t" style="font-size:14px">이용 중인 통신사</span></div>
-        <div class="tel-grid" id="dCarrier"></div>
-        <div id="dStep2" style="display:none;margin-top:18px">
-          <div class="step" style="margin-bottom:12px"><span class="step-no">2</span><span class="step-t" style="font-size:14px">제조사 선택</span></div>
-          <div class="brand-grid" id="dBrand"></div>
-        </div>
-        <div id="dStep3" style="display:none;margin-top:18px">
-          <div class="step" style="margin-bottom:12px"><span class="step-no">3</span><span class="step-t" style="font-size:14px">단말·가격 비교</span></div>
-          <div id="dList"></div>
-        </div>
-        <div class="demo-hint" id="dHint"><span class="k">↑ 이용 중인 통신사를 눌러보세요</span></div>
-      </div>
+    <div class="flow">
+      <div class="flow-step"><div class="flow-no">1</div><div class="flow-t">통신사·기종 선택</div><div class="flow-s">쓰던 통신사와 원하는 휴대폰을 고릅니다</div></div>
+      <div class="flow-arrow">›</div>
+      <div class="flow-step"><div class="flow-no">2</div><div class="flow-t">실시간 가격 비교</div><div class="flow-s">지원금 반영 실구매가를 조건별로 비교합니다</div></div>
+      <div class="flow-arrow">›</div>
+      <div class="flow-step"><div class="flow-no">3</div><div class="flow-t">카카오톡 상담·신청</div><div class="flow-s">선택한 조건 그대로 상담이 시작됩니다</div></div>
     </div>
   </div>
 
   <!-- ===== ④ 숫자 증명 ===== -->
   <div class="card">
     <div class="step"><span class="step-no">4</span><span class="step-t">숫자로 보는 폰스팟</span></div>
-    <div class="benefit-grid">
-      <div class="benefit"><div class="benefit-v"><span class="ph">00만</span></div><div class="benefit-s">월간 시세 조회</div></div>
-      <div class="benefit"><div class="benefit-v"><span class="ph">0,000</span></div><div class="benefit-s">누적 상담 신청</div></div>
-      <div class="benefit"><div class="benefit-v"><span class="ph">000</span></div><div class="benefit-s">전국 입점 판매점</div></div>
-      <div class="benefit"><div class="benefit-v"><span class="ph">00만원</span></div><div class="benefit-s">이용자 평균 절약액</div></div>
+    <div class="stat-band">
+      <div><div class="stat-v">20년</div><div class="stat-l">운영사 휴대폰 업계 경력</div></div>
+      <div><div class="stat-v">60,000+</div><div class="stat-l">누적 가입자</div></div>
+      <div><div class="stat-v">실시간</div><div class="stat-l">매일 갱신되는 시세 비교</div></div>
     </div>
-    <p class="body" style="margin-top:12px;font-size:11.5px;color:var(--ink-3)">※ 발송 전 실제 수치로 교체 — 숫자가 약한 항목은 카드를 빼고 3개로 구성하세요.</p>
   </div>
 
-  <!-- ===== ④ 협업 제안 (트랙 토글) ===== -->
+  <!-- ===== ④ 협업 제안 ===== -->
   <div class="sect">
-    <h2 class="sect-h">협업 제안 — 두 가지 수익 트랙</h2>
-    <p class="sect-sub">구독자에게는 '진짜 아끼는 정보'를, 채널에는 '조회수 수익과 별개의 파이프라인'을. 탭을 눌러 비교해보세요.</p>
+    <h2 class="sect-h">협업 제안 — PPL 영상</h2>
+    <p class="sect-sub">구독자에게는 '진짜 아끼는 정보'를, 채널에는 '확정된 제작비 수익'을 드립니다.</p>
   </div>
   <div class="card">
-    <div class="mode">
-      <div class="mode-btn on" id="tA" onclick="setTrack('A')">Track A · 브랜디드/PPL</div>
-      <div class="mode-btn" id="tB" onclick="setTrack('B')">Track B · 제휴 수익 배분</div>
-    </div>
-    <div class="track-body" id="trackBody"></div>
-  </div>
-
-  <!-- ===== ⑤ 수익 시뮬레이터 (Track B 선택 시 노출) ===== -->
-  <div id="simWrap" style="display:none">
-  <div class="sect">
-    <h2 class="sect-h">영상 한 편이 만드는 제휴 수익</h2>
-    <p class="sect-sub">Track B 기준. 조회수·클릭률·전환율을 직접 조절하면 예상 수익이 실시간으로 계산됩니다. 수치는 가정값이며 실제 단가는 미팅에서 확정합니다.</p>
-  </div>
-  <div class="card">
-    <div class="crow">
-      <div class="clab">영상 예상 조회수 <span class="cval" id="vViews">30,000회</span></div>
-      <input class="crange" type="range" min="5000" max="300000" step="5000" value="30000" oninput="C.views=+this.value;calcRender()">
-    </div>
-    <div class="crow">
-      <div class="clab">링크 클릭률 <span class="h">(설명란·고정댓글 경유)</span></div>
-      <div class="fee-grid" id="ctrChips"></div>
-    </div>
-    <div class="crow">
-      <div class="clab">클릭 → 상담 전환율</div>
-      <div class="fee-grid" id="cvrChips"></div>
-    </div>
-    <div class="crow" style="margin-bottom:0">
-      <div class="clab">상담 1건당 수수료 <span class="cval" id="vFee">10,000원</span> <span class="h">— 예시 단가, 협의 대상</span></div>
-      <input class="crange" type="range" min="3000" max="50000" step="1000" value="10000" oninput="C.fee=+this.value;calcRender()">
-    </div>
-    <div class="calc-sum">
-      <div class="calc-top"><span class="l">영상 1편 예상 제휴 수익</span><span class="big" id="vTotal">—</span></div>
-      <div class="brk">
-        <div class="brow"><span class="k">예상 조회수</span><span class="v" id="bViews">—</span></div>
-        <div class="brow m"><span class="k">링크 클릭</span><span class="v" id="bClicks">—</span></div>
-        <div class="brow m"><span class="k">상담 전환</span><span class="v" id="bConv">—</span></div>
-        <div class="brow tot"><span class="k">제휴 수익</span><span class="v" id="bTotal">—</span></div>
-      </div>
-      <div class="chint">▸ 영상은 업로드 후에도 계속 시청됩니다. 제휴 수익은 <b>영상이 살아있는 한 매달 반복 발생</b>합니다.<br>▸ Track A(제작비)와 결합하면 "제작비 + 지속 수익" 구조가 됩니다.</div>
+    <div class="track-body">
+      <h4>PPL 영상</h4><div class="tsub">확정 수익 · 영상 1편 단위</div>
+      <ul>
+        <li>채널 영상 1편 내 <b>30~60초 PPL</b>로 폰스팟 소개·시연</li>
+        <li>제작비 지급: <b>금액 협의</b></li>
+        <li>폰스팟이 <b>영상 가이드를 제공</b>합니다 — 가이드에 안내된 사항만 따라주시면 됩니다</li>
+        <li>그 외 기획·연출·편집은 <b>채널의 방식 그대로</b> 자유롭게 진행하시면 됩니다</li>
+      </ul>
     </div>
   </div>
-
-  </div><!--/simWrap-->
 
   <!-- ===== ⑩ FAQ ===== -->
   <div class="sect">
     <h2 class="sect-h">자주 묻는 질문</h2>
   </div>
   <div id="faqList" style="margin-bottom:14px">
-    <div class="faq" onclick="this.classList.toggle('open');fixFaq()"><div class="faq-q">제작비는 어떻게 책정되나요?<span class="faq-x">+</span></div><div class="faq-a">채널 규모와 영상 형태(통합 브랜디드/부분 PPL)에 따라 미팅에서 협의합니다. Track A+B 결합도 가능합니다.</div></div>
-    <div class="faq" onclick="this.classList.toggle('open');fixFaq()"><div class="faq-q">수익 배분은 어떻게 확인하나요?<span class="faq-x">+</span></div><div class="faq-a">채널 전용 추적 링크의 클릭·상담·개통 성과를 월간 리포트로 공유하고, 매월 정해진 날짜에 정산합니다.</div></div>
-    <div class="faq" onclick="this.classList.toggle('open');fixFaq()"><div class="faq-q">영상 내용에 얼마나 관여하나요?<span class="faq-x">+</span></div><div class="faq-a">가격·제도 설명 같은 사실관계만 1회 검수합니다. 기획·연출·편집은 전적으로 크리에이터의 몫입니다.</div></div>
-    <div class="faq" onclick="this.classList.toggle('open');fixFaq()"><div class="faq-q">한 번 하고 끝인가요?<span class="faq-x">+</span></div><div class="faq-a">1편으로 시작해 성과가 맞으면 신기종 출시 주기(연 2~4회)에 맞춘 정기 협업으로 확장합니다. 제휴 링크 수익은 영상이 살아있는 한 계속 발생합니다.</div></div>
+    <div class="faq" onclick="this.classList.toggle('open');fixFaq()"><div class="faq-q">제작비는 어떻게 책정되나요?<span class="faq-x">+</span></div><div class="faq-a">채널 규모와 PPL 구성에 따라 미팅에서 협의합니다.</div></div>
+    <div class="faq" onclick="this.classList.toggle('open');fixFaq()"><div class="faq-q">영상 내용에 얼마나 관여하나요?<span class="faq-x">+</span></div><div class="faq-a">제작 전 영상 가이드를 제공하며, 가이드에 안내된 사항만 반영해주시면 됩니다. 그 외 기획·연출·편집은 채널의 방식 그대로 진행하시면 됩니다.</div></div>
+    <div class="faq" onclick="this.classList.toggle('open');fixFaq()"><div class="faq-q">한 번 하고 끝인가요?<span class="faq-x">+</span></div><div class="faq-a">1편으로 시작해 성과가 맞으면 신기종 출시 주기(연 2~4회)에 맞춘 정기 협업으로 확장합니다.</div></div>
     <div class="faq" onclick="this.classList.toggle('open');fixFaq()"><div class="faq-q">얼굴 노출 없는 채널도 가능한가요?<span class="faq-x">+</span></div><div class="faq-a">네. 화면 녹화·자료 화면 중심으로도 충분히 제작 가능합니다. 시세조회 시연 자체가 핵심 장면이라 얼굴 노출이 필수가 아닙니다.</div></div>
   </div>
 
   <!-- ===== ⑪ CTA ===== -->
   <div class="cta-card">
-    <div class="cta-h">구독자의 통신비를 아껴주는 영상,<br><span class="o">폰스팟</span>과 함께 만들어요.</div>
-    <div class="cta-sub">통신비는 아는 사람만 아끼는 돈입니다.<br>그 정보를 전하는 영상, 편하게 문의부터 주세요.</div>
-    <a class="cta-btn" href="mailto:CONTACT@EMAIL">협업 문의 회신하기</a>
-    <div class="cta-foot"><b>담당자 이름 · 직책</b> — 연락처 / 카카오톡 채널 <span class="ph">발송 전 교체</span><br>폰스팟(PHONESPOT) · KAIT 사전승낙 정식 휴대폰 판매점</div>
+    <div class="cta-h">구독자의 휴대폰값을 아껴주는 영상,<br><span class="o">폰스팟</span>과 함께 만들어요.</div>
+    <div class="cta-sub">휴대폰값은 아는 사람만 아끼는 돈입니다.<br>그 정보를 전하는 영상, 편하게 문의부터 주세요.</div>
+    <a class="cta-btn" href="mailto:phonespot86@naver.com">협업 문의 회신하기</a>
+    <div class="cta-foot"><b>담당자 노건우</b> — 010-8651-5120 · phonespot86@naver.com<br>폰스팟(PHONESPOT) · KAIT 사전승낙 정식 휴대폰 판매점</div>
+    <div class="cert-wrap"><a class="cert-link" href="https://ictmarket.or.kr:8443/precon/pop_CertIcon.do?PRECON_REQ_ID=PRE0000194479&amp;YN=1" target="_blank" rel="noopener"><img src="data:image/jpeg;base64,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n5lOSOPqAed/BIeF/EPi74j3viTxJJ4n8NXXh/S21G+1W5jdY+Hd4ZJYgqZjPHHpXJ/B21+HEWveMru58Jx6JPqcF5qXgW5ulePz7MRSxFYctgtxu2nJIckcYr2nwB4D8F6dceJNQ8aeM/DXiq88RpDFfQLb29rZeXCcoBArEFs4O5iTwK77xT/wgmu6G2nyan4cEkUEkdjK8kL/AGNmiaMPGM/KQGxxjjigD5V+Jepafffs4fDPwW9npjX95osM8d3eaVdXEluNwIFu8MbAM3lMHU87ccc1F8EvEKwfGWz8W6r4C8O6Kl55dl9jsvDN6rWW0somhIi2K7lhuYt9306V7Pf+AtKbwL4A0XTfi1pejap4MGYNQjjgmEr+WUJ8t3wOCeuetdH4B0/xWviq0e++PVp4ptUDtLpcWk2cTTjaR9+Niy4JDZHp70Acv8VtL+JXxgv/AOw9E0OTwdo/h6/+2w6jrMamTUL2AsIVjjUnEG75jIc5BGBxgxfFjU/FPj74GeIfD3iH4R6+niOJkto4bdI57drgqxW5gfdlo1K8nGV3gc8469/gL4UZ2b/hIfHIJOePE11/8VWlpHww/wCEW0vVj4M8S6zb6vewLFDc6xey6lFCQ2dwikbGeo696APjfxFpb6bZ+PtPtfhjeaBfXMOhlGKw7tMiEkKyExhixE06buM9BnFffXhSz1fT/D9pZ69rI1rUolIuL4Wq24mOSc+WpIXjAwPSvI4vgRqunX58XaN8Stah+IErE3ut3EKSwXqEL+5e24URDaNoByvqcDHtVilxFZQR3c63FwkarLKqbBI4AywXJxk5OM8UATUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUhVT1AP4UtFACbE/ur+VGxP7q/lS0UAJsT+6v5UbE/ur+VLRQAmxP7q/lRsT+6v5UtFACbE/ur+VGxP7q/lS0UAJsT+6v5UbE/ur+VLRQA3y0/uL+VKFUdFA/ClooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA/9k=" alt="KAIT 온라인판매점 사전승낙 인증마크 — 주식회사 휴대폰성지폰스팟"><span class="cert-cap">휴대폰성지 폰스팟 사전승낙서</span></a></div>
   </div>
 
 </div><!--/wrap-->
@@ -454,119 +346,6 @@ a{color:inherit;text-decoration:none}
 <a href="https://pf.kakao.com/_yHVbX/chat" class="fab" target="_blank" rel="noopener">💬</a>
 
 <script>
-const won=n=>n.toLocaleString('ko-KR')+'원';
-
-/* ---- Track 토글 ---- */
-const TRACKS={
-A:`<h4>Track A — 브랜디드 / PPL 영상</h4><div class="tsub">확정 수익 · 영상 1편 단위</div><ul>
-<li>채널 영상 1편 내 폰스팟 소개·시연 — <b>통합 브랜디드</b> 또는 <b>30~60초 PPL</b> 중 선택</li>
-<li>제작비 지급: <span class="ph">금액 — 채널 규모별 협의</span></li>
-<li>영상 제작은 <b>크리에이터가 자율적으로</b> — 기획·연출·편집 모두 채널의 방식 그대로</li>
-<li>폰스팟의 관여는 <b>최소한</b>입니다 — 가격·제도 사실관계 확인과 자료 제공 정도</li></ul>
-<div class="combo">Track B와 결합 가능 — 제작비 + 성과 수익 동시 구조</div>`,
-B:`<h4>Track B — 제휴 링크 · 수익 배분</h4><div class="tsub">지속 수익 · 영상이 살아있는 한 계속</div><ul>
-<li>영상 설명란·고정댓글에 <b>채널 전용 추적 링크</b> 제공</li>
-<li>링크 경유 상담/개통 성과 건당 <span class="ph">단가 — 미팅에서 확정</span> 지급</li>
-<li>월 단위 성과 리포트 투명 공유 + 매월 정산</li>
-<li>업로드 이후에도 검색 유입으로 수익 반복 발생 — <b>영상 1편이 파이프라인</b>이 됩니다</li></ul>
-<div class="combo">아래 수익 시뮬레이터에서 직접 계산해보세요 ↓</div>`};
-function setTrack(t){
-  document.getElementById('tA').classList.toggle('on',t==='A');
-  document.getElementById('tB').classList.toggle('on',t==='B');
-  document.getElementById('trackBody').innerHTML=TRACKS[t];
-  document.getElementById('simWrap').style.display = t==='B' ? 'block' : 'none';
-}
-setTrack('A');
-
-/* ---- 수익 계산기 ---- */
-const C={views:30000,ctr:0.03,cvr:0.10,fee:10000};
-const CTRS=[[0.01,'1%'],[0.03,'3%'],[0.05,'5%'],[0.08,'8%']];
-const CVRS=[[0.05,'5%'],[0.10,'10%'],[0.15,'15%'],[0.20,'20%']];
-function chipRow(el,arr,key){
-  document.getElementById(el).innerHTML=arr.map(([v,t])=>`<span class="fee-btn ${C[key]===v?'on':''}" onclick="C.${key}=${v};calcRender()">${t}</span>`).join('');
-}
-function calcRender(){
-  chipRow('ctrChips',CTRS,'ctr');chipRow('cvrChips',CVRS,'cvr');
-  const clicks=Math.round(C.views*C.ctr);
-  const conv=Math.round(clicks*C.cvr);
-  const total=conv*C.fee;
-  document.getElementById('vViews').textContent=C.views.toLocaleString('ko-KR')+'회';
-  document.getElementById('vFee').textContent=won(C.fee);
-  document.getElementById('bViews').textContent=C.views.toLocaleString('ko-KR')+'회';
-  document.getElementById('bClicks').textContent=clicks.toLocaleString('ko-KR')+'회 ('+(C.ctr*100)+'%)';
-  document.getElementById('bConv').textContent=conv.toLocaleString('ko-KR')+'건 ('+(C.cvr*100)+'%)';
-  document.getElementById('bTotal').textContent=won(total);
-  document.getElementById('vTotal').textContent='약 '+won(total);
-}
-calcRender();
-
-/* ---- 사용법 미니 데모 (서비스 원본 로직·이미지) ---- */
-const IMG_C='https://www.phonespot.co.kr/quote/img/carriers/';
-const IMG_M='https://api.phonespot.co.kr/uploads/model/';
-const DEMO={carrier:null,brand:null,caps:{}};
-const DCAR=[['KT','kt.png','#ed1b2f'],['SKT','skt.png','#3318ff'],['LGU','lgu.png','#a50034'],['MVNO','','#6e6e73']];
-const DCAR_LABEL={KT:'KT',SKT:'SKT',LGU:'LG U+',MVNO:'알뜰폰'};
-const DMODELS={
- '삼성':[
-  {name:'갤럭시 S26',img:'191811391bb07b134baa1b8b80507dd8.png',caps:[['256GB',1254000],['512GB',1507000]]},
-  {name:'갤럭시 Z플립7',img:'f55d8ae6010b490cd325b33f1c38438a.png',caps:[['256GB',1485000],['512GB',1643400]]}],
- '애플':[
-  {name:'아이폰17',img:'0a6eee10a803ba667fa71d321de9c0ed.png',caps:[['256GB',1287000],['512GB',1584000]]},
-  {name:'아이폰16E',img:'a9ae2545bfe688ea9809299ffe26d271.png',caps:[['128GB',990000],['256GB',1133000]]}]
-};
-const DTARGETS=[['KT','kt.png','#ed1b2f'],['SKT','skt.png','#3318ff'],['LGU','lgu.png','#a50034']];
-function dCalc(price,opening){
-  const ratio=opening==='기기변경'?0.34:0.39;
-  const support=Math.round(price*ratio/1000)*1000;
-  const real=Math.max(0,price-support);
-  const pct=Math.round((1-real/price)*100);
-  return{real,pct};
-}
-function dRender(){
-  document.getElementById('dCarrier').innerHTML=DCAR.map(([v,img,c])=>{
-    const inner=img?`<img src="${IMG_C}${img}" alt="${DCAR_LABEL[v]}" onerror="this.outerHTML='<b style=color:${c}>${DCAR_LABEL[v]}</b>'">`:'알뜰폰';
-    return `<div class="tel ${DEMO.carrier===v?'on':''}" onclick="dSelC('${v}')">${inner}</div>`;
-  }).join('');
-  const s2=document.getElementById('dStep2'), s3=document.getElementById('dStep3'), h=document.getElementById('dHint');
-  s2.style.display=DEMO.carrier?'block':'none';
-  if(DEMO.carrier){
-    const brands=[['삼성',1],['애플',1],['전시폰',0],['키즈효도폰',0]];
-    document.getElementById('dBrand').innerHTML=brands.map(([b,ok])=>
-      `<div class="brand ${DEMO.brand===b?'on':''} ${ok?'':'dis'}" onclick="${ok?`dSelB('${b}')`:`alert('데모에서는 삼성·애플만 체험할 수 있어요. 전체 카테고리는 phonespot.co.kr에서!')`}">${b}</div>`).join('');
-  }
-  s3.style.display=(DEMO.carrier&&DEMO.brand)?'block':'none';
-  if(DEMO.carrier&&DEMO.brand){
-    document.getElementById('dList').innerHTML=DMODELS[DEMO.brand].map(m=>{
-      const cap=DEMO.caps[m.name]||m.caps[0][0];
-      const price=m.caps.find(c=>c[0]===cap)[1];
-      const capBtns=m.caps.map(([cv])=>`<div class="qcap ${cap===cv?'on':''}" onclick="dSelCap('${m.name}','${cv}')">${cv}</div>`).join('');
-      const rows=DTARGETS.map(([t,img,col])=>{
-        const opening=(t===DEMO.carrier)?'기기변경':'번호이동';
-        const r=dCalc(price,opening);
-        return `<div class="qrow" onclick="alert('실제 사이트에서는 요금제·가입유형별 상세 비교와 카카오톡 상담으로 이어집니다.\\n\\nphonespot.co.kr')">
-          <div class="qlogo"><img src="${IMG_C}${img}" alt="${DCAR_LABEL[t]}" onerror="this.outerHTML='<b style=color:${col}>${DCAR_LABEL[t]}</b>'"></div>
-          <div style="flex:1;min-width:0"><span class="qtag">${DCAR_LABEL[t]} ${opening}</span>
-            <div class="qprice"><span class="qpct">${r.pct}%</span><div style="display:flex;flex-direction:column;align-items:flex-start"><span>${won(r.real)}~</span><span class="qold">${won(price)}</span></div></div>
-          </div>
-          <span class="pr-chev">›</span></div>`;
-      }).join('');
-      return `<div class="qdev">
-        <div class="qleft">
-          <div class="qimg"><img src="${IMG_M}${m.img}" alt="${m.name}" onerror="this.style.display='none'"></div>
-          <div class="qname">${m.name}</div>
-          <div class="qcaps">${capBtns}</div>
-        </div>
-        <div class="qrows">${rows}</div>
-      </div>`;
-    }).join('');
-  }
-  h.innerHTML='<span class="k">'+(!DEMO.carrier?'↑ 이용 중인 통신사를 눌러보세요':(!DEMO.brand?'↑ 제조사를 선택해보세요':'↑ 통신사·용량을 바꾸면 가격이 실시간으로 다시 계산됩니다'))+'</span>';
-}
-function dSelC(v){DEMO.carrier=v;dRender();}
-function dSelB(v){DEMO.brand=v;dRender();}
-function dSelCap(n,c){DEMO.caps[n]=c;dRender();}
-dRender();
-
 /* ---- FAQ ± ---- */
 function fixFaq(){
   document.querySelectorAll('#faqList .faq').forEach(f=>{
